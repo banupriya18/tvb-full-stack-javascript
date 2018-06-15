@@ -16,3 +16,13 @@
  * This assignment requires you to implement some function
  * that delays one of the logs to be printed by 3000ms
  */
+
+console.log('one');
+console.log('two');
+let third = setInterval(function(){
+    console.log("three");
+},3000);
+
+let timeout = setTimeout(function(){
+    clearInterval(third);
+},3500);
