@@ -7,3 +7,7 @@
  * caller via the callback (or function) provided
  * as the second argument
  */
+$.get( "https://gist.github.com/banupriya18/1b232cc819a39429388939f5184654e9", function( data ) {
+    //$( ".result" ).html( data );
+    console.log(data);
+  });

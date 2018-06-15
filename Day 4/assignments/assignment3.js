@@ -8,3 +8,17 @@
  * back to the caller (caller is the line in which printNameLater was called)
  * after the time has passed.
  */
+var string = "Text message";
+var time = setTimeout(function(){
+    console.log("called after 2000ms");
+}, 2000);
+var cb = function(){
+    console.log('Callback function');
+};
+function printNameLater(string,time,cb){
+    console.log(string);
+    //cb();
+}
+
+console.log(printNameLater);
+

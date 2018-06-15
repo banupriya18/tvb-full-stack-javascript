@@ -6,3 +6,17 @@
  * and `phone` information.
  *
  */
+function getUsers(){
+  $.get("https://www.randomuser.me/api/?results=10",function(data){
+    var results= data.results;
+    let userDetails = results.map(function(info) {
+      return {
+        email: info.email,
+        phone: info.phone,
+        name: info.name.first+" "+info.name.last      
+      }
+    });
+    console.log(userDetails);
+  }); 
+}
+getUsers();

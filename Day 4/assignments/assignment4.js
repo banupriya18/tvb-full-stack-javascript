@@ -12,3 +12,9 @@
  * Hint: all user information is available on the `data.results`
  * key on the response object.
  */
+function getUsers(){
+    $.get("https://www.randomuser.me/api/?results=10",function(data){
+        console.log(data.results);
+    }); 
+}
+getUsers();

@@ -135,3 +135,15 @@ let users = [
 
 // TODO: console.log the transformed array of objects
 // that only contains the name from the above users array
+
+let transformedName = users.map(function(user) {
+  return {
+    name: user.name,
+    friends:user.friends.map(function(friendName){
+      return {
+      name:friendName.name
+    }
+  })
+  }
+});
+console.log(transformedName);
